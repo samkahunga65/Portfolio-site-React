@@ -24,6 +24,7 @@ let Nav = () => {
       setNavbar(false);
     }
   };
+  const scrollBT = () => window.scrollTo({ top: 100000, behavior: "smooth" });
   window.addEventListener("scroll", changeBackground);
   return (
     <div className="Nav">
@@ -44,8 +45,9 @@ let Nav = () => {
         <Toolbar>
           <Typography variant="h6">Kahunga</Typography>
           <div className="Nav-Buttons">
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Contact</Button>
+            <Button color="inherit" onClick={scrollBT}>
+              Contact
+            </Button>
           </div>
         </Toolbar>
       </AppBar>
